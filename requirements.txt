@@ -1,0 +1,5 @@
+﻿Werkzeug==0.16.1
+markupsafe==2.0.1
+gunicorn
+Flask
+redis
