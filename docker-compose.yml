@@ -5,20 +5,15 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    #PUERTOS EN DÓNDE SE EJECUTARÁ
     ports:
       - "4000:4000"
     network_mode: bridge
-    #nombre del container
     container_name: proyectoflask2
     image: python-test-app2
-   #si se realiza un cambio se vera reflejado
     volumes: 
       - .:/app
     environment:
-    #guardar y ejecutar los ambios sin necesidad de reiniciar contenedor
        FLASK_DEBUG: development
   redis:
-  #instalar una imagen de redis
     image: "redis:alpine"
     network_mode: bridge
