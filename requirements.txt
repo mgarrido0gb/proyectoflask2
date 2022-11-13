@@ -3,3 +3,6 @@ markupsafe==2.0.1
 gunicorn
 Flask
 redis
+bs4
+requests
+lxml
