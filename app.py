@@ -8,7 +8,7 @@ app = Flask(__name__)
 #def inicio():
 #    return jsonify({"response":"Hola Mundo"})
 
-sitioweb = 'https://subslikescript.com/movie/2012-1190080'
+sitioweb = 'https://www.culturagenial.com/es/peliculas-recomendadas/'
 respuesta = requests.get(sitioweb)
 contenido =respuesta.text
 
@@ -16,11 +16,11 @@ contenido =respuesta.text
 soup =  BeautifulSoup(contenido,'lxml')
 #print(soup.prettify())
 
-caja = soup.find('article',class_='main-article')
-titulo = caja.find('h1').get_text()
+caja = soup.find('article',class_='article')
 
-transcript = caja.find('div',class_='full-script').get_text(strip=True, separator=' ')
-
+titulo = caja.find('h3').get_text()
+transcript = caja.find('h3').get_text(strip=True, separator=' ')
+print(titulo)
 with open(f'{titulo}.txt', 'w', encoding='utf-8') as file:
     file.write(transcript)
  
