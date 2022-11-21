@@ -21,13 +21,13 @@ todo = soup.find_all('div',class_='container')
 nombres = soup.find_all('h5',class_='seleccionRS')
 
 
-titulotxt = list()
+nombrestxt = list()
 for listado in nombres:
     resultado = print(listado.text.replace(' ','|'))
-    titulotxt.append(listado.text)
+    nombrestxt.append(listado.text)
     
-todo = list(map(str,titulotxt))
-resultado = ''.join(todo)
+todo = list(map(str,nombrestxt))
+resultado = ''.join(todo) 
     
 with open('presidentes.txt', 'w', encoding='utf-8') as file:
    file.write(resultado.replace(' ','|'))

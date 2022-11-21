@@ -17,3 +17,11 @@ services:
   redis:
     image: "redis:alpine"
     network_mode: bridge
+  
+  #splunk-ent:
+  #  image: splunk/splunk
+  #  environment:
+  #    SPLUNK_USER: mgarridoef@gmail.com
+  #    SPLUNK_PASSWORD: '@Thumas13'
+  #    SPLUNK_START_ARGS: --accept-license --no-prompt
+    
