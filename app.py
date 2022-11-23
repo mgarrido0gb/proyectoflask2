@@ -1,12 +1,12 @@
 from flask import Flask, jsonify
 from bs4 import BeautifulSoup
 import requests
+import lxml
+
+
 
 app = Flask(__name__)
 
-#@app.route('/', methods=['GET'])
-#def inicio():
-#    return jsonify({"response":"Hola Mundo"})
 
 sitioweb = 'https://www.bcn.cl/historiapolitica/presidentes_de_la_republica/index.html'
 respuesta = requests.get(sitioweb)
@@ -34,3 +34,6 @@ with open('presidentes.txt', 'w', encoding='utf-8') as file:
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=4000,debug=True) 
+    
+   
+   

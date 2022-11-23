@@ -21,7 +21,7 @@ services:
   #splunk-ent:
   #  image: splunk/splunk
   #  environment:
-  #    SPLUNK_USER: mgarridoef@gmail.com
+  #    SPLUNK_USER: mfigueroa@ewarecorp.com
   #    SPLUNK_PASSWORD: '@Thumas13'
   #    SPLUNK_START_ARGS: --accept-license --no-prompt
     
